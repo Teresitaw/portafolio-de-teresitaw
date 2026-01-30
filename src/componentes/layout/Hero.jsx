@@ -12,7 +12,7 @@ const Hero = () => {
 					</h3>
 					<p className="subtitulo">
 						Soy una entusiasta desarrolladora web <br />
-						freelancer motivada para impulsar tus proyectos
+						freelancer motivada a impulsar tus proyectos
 					</p>
 					<div className="botones">
 						<a href="#trabajos" className="boton transparente">
