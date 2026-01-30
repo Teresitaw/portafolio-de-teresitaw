@@ -1,5 +1,5 @@
 .hero {
-	background-image: url("./public/assets/hero-tt.jpg");
+	background-image: url("/assets/hero-tt.jpg");
 	background-size: cover;
 	background-position: center;
 	border-radius: 20px;
