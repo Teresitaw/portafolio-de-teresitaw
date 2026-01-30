@@ -1,0 +1,93 @@
+.hero {
+	background-image: url("./assets/hero-tt.jpg");
+	background-size: cover;
+	background-position: center;
+	border-radius: 20px;
+	overflow: hidden;
+	color: white;
+	position: relative;
+
+	.contenido {
+		position: relative;
+		z-index: 1;
+		width: 50vw;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 40px 20px;
+
+		@media screen and (max-width: 855px) {
+			& {
+				width: 90vw;
+			}
+		}
+
+		@media screen and (max-width: 475px) {
+			& {
+				padding: 30px 20px;
+				text-align: center;
+				.titulo {
+					font-size: 32px;
+				}
+			}
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(255, 255, 255, 0.448) 100%);
+	}
+
+	.titulo {
+		font-family: "Jersey 10", sans-serif;
+		font-size: 50px;
+		font-weight: 400;
+		color: white;
+	}
+
+	.subtitulo {
+		line-height: 26px;
+		color: white;
+		@media screen and (max-width: 353px) {
+			& {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.botones {
+		display: flex;
+		gap: 10px;
+
+		.transparente {
+			background: rgba(255, 255, 255, 0.208);
+			&:hover {
+				background: rgba(255, 255, 255, 0.342);
+			}
+		}
+		@media screen and (max-width: 475px) {
+			& {
+				flex-direction: column;
+				align-items: center;
+				.boton {
+					width: 90%;
+					justify-content: center;
+				}
+			}
+		}
+		@media screen and (max-width: 327px) {
+			& {
+				.boton {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

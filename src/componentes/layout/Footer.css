@@ -1,0 +1,78 @@
+.footer {
+	margin-bottom: 60px;
+	.links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		margin-bottom: 60px;
+
+		.link {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			padding: 10px 15px;
+			background: var(--shade-2);
+			border-radius: 100px;
+			color: var(--shade-8);
+			transition: 0.3s ease all;
+			text-decoration: none;
+
+			.icono {
+				height: 18px;
+				width: 18px;
+
+				svg {
+					height: 100%;
+					width: 100%;
+					transition: 0.3s ease all;
+				}
+			}
+
+			&:hover {
+				background: var(--shade-3);
+				&.youtube {
+					svg {
+						color: red;
+					}
+				}
+				&.tiktok {
+					svg {
+						color: rgb(0, 0, 0);
+					}
+				}
+				&.twitch {
+					svg {
+						color: #6441a5;
+					}
+				}
+				&.linkin {
+					svg {
+						color: rgb(0, 208, 255);
+					}
+				}
+			}
+		}
+	}
+	.copyright {
+		font-size: 14px;
+		color: var(--shade-4);
+	}
+
+	.dark & {
+		.links {
+			.link {
+				background: rgb(19, 19, 19);
+				color: var(--shade-4);
+				&:hover {
+					background: black;
+					&.tiktok {
+						svg {
+							color: white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

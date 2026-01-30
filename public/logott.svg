@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fondo -->
+  <circle cx="32" cy="32" r="30" fill="#1f1f2e"/>
+
+  <!-- Audífonos -->
+  <path d="M14 34a18 18 0 0 1 36 0" fill="none" stroke="#ff7a18" stroke-width="4"/>
+  <rect x="10" y="34" width="6" height="14" rx="3" fill="#ff7a18"/>
+  <rect x="48" y="34" width="6" height="14" rx="3" fill="#ff7a18"/>
+
+  <!-- Cabello (parte trasera) -->
+  <path d="M20 30c0-8 24-8 24 0v12c0 6-24 6-24 0z" fill="#ff8c2b"/>
+
+  <!-- Cabeza -->
+  <circle cx="32" cy="34" r="11" fill="#f2c9ac"/>
+
+  <!-- Cabello frontal -->
+  <path d="M21 31c3-6 19-6 22 0v3H21z" fill="#ff8c2b"/>
+
+  <!-- Gorrito -->
+  <path d="M20 28c2-10 22-10 24 0v4H20z" fill="#2b2b3d"/>
+  <rect x="20" y="30" width="24" height="4" rx="2" fill="#3a3a52"/>
+
+  <!-- Lentes -->
+  <rect x="23" y="34" width="7" height="4" rx="1" fill="#1f1f2e"/>
+  <rect x="34" y="34" width="7" height="4" rx="1" fill="#1f1f2e"/>
+  <rect x="30" y="35" width="4" height="1" fill="#1f1f2e"/>
+</svg>

@@ -1,0 +1,134 @@
+.trabajos {
+	.encabezado {
+		.subtitulo {
+			max-width: 70vw;
+		}
+	}
+	.filtros {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		label {
+			display: flex; /*solución para cuando las etiquetas se amontonan*/
+		}
+
+		.opcion {
+			padding: 10px 20px;
+			border-radius: 100px;
+			cursor: pointer;
+			border: 1px solid var(--shade-3);
+			color: var(--shade-7);
+
+			.dark & {
+				color: var(--shade-3);
+				border: 1px solid var(--shade-7);
+			}
+		}
+
+		input[type="radio"] {
+			display: none;
+			&:checked + .opcion {
+				background: var(--primario);
+				color: white;
+				border: 1px solid transparent;
+			}
+		}
+
+		@media screen and (max-width: 898px) {
+			& {
+				gap: 10px;
+			}
+		}
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 40px 20px;
+
+		@media screen and (max-width: 768px) {
+			& {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+		@media screen and (max-width: 576px) {
+			& {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		/* @media screen and (max-width: 375px) {
+			& {
+				grid-template-columns: 1fr;
+			}
+		} */
+
+		.trabajo {
+			.thumb {
+				/* width: 100%; linea opcional que se usa para asegurarse que no sobre pase el thumb*/
+				display: inline-block; /*esta linea me permitió poner bordes redondeados no sé porqué*/
+				border-radius: 10px;
+				overflow: hidden;
+				margin-bottom: 10px;
+				aspect-ratio: 1/1;
+
+				img {
+					width: 100%;
+					/* border-radius: 10px; aunque pues a mi parecer era más sencillo no poner "display inline-block" y aquí asi no ocuparía el overflow hidden*/
+					vertical-align: top; /*quita el margen que tienen por defecto las imágenes en los navegadores*/
+					transform: scale(110%);
+					transition: 0.3s ease all;
+
+					&:hover {
+						transform: scale(100%);
+					}
+				}
+			}
+			.info {
+				display: flex;
+				/* gap: 20px; esto ni se ocupa aquí*/
+				justify-content: space-between;
+				align-items: center; /*centra el icono con respecto al texto*/
+
+				.textos {
+					display: flex;
+					flex-direction: column;
+					gap: 5px;
+					text-align: left;
+
+					a {
+						color: var(--shade-10);
+						font-size: 16px;
+						font-weight: 600;
+						.dark & {
+							color: var(--shade-1);
+						}
+					}
+
+					.categoria {
+						font-size: 14px;
+						color: var(--shade-6);
+						.dark & {
+							color: var(--shade-4);
+						}
+					}
+				}
+				.btn-ir {
+					background: none;
+					border: none;
+					/* cursor: pointer; otra vez esto no hace falta*/
+					display: flex;
+					align-items: center;
+					/* width: 30px; no estoy muy segura pero creo que este debería estar en el svg*/
+					svg {
+						width: 20px;
+						height: 20px;
+						color: var(--primario);
+						transition: 0.3s ease all;
+					}
+				}
+			}
+		}
+	}
+}

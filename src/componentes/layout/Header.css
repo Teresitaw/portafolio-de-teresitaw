@@ -1,0 +1,64 @@
+.header {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 20px;
+	align-items: center;
+	padding: 40px 0;
+
+	.logo {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		.titulo {
+			font-family: "Itim", cursive;
+			font-size: 34px;
+			color: var(--shade-8);
+
+			.dark & {
+				color: var(--shade-1);
+				font-weight: 600;
+			}
+		}
+		.subtitulo {
+			font-size: 16px;
+			font-weight: 800;
+			background: var(--gradiente);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent;
+		}
+	}
+
+	.navbar {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+	}
+
+	@media screen and (max-width: 670px) {
+		& {
+			.logo {
+				grid-column: 1 / -1;
+				align-items: center; /*tambien puedo poner text-align: center*/
+			}
+			.navbar {
+				grid-column: span 2;
+				justify-content: flex-start; /*tambien puse solo start y se ve igual*/
+				gap: 15px;
+			}
+		}
+	}
+
+	@media screen and (max-width: 361px) {
+		& {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,129 @@
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.82);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: flex; /*centrar*/
+	align-items: center;
+	justify-content: center;
+
+	.dark & {
+		background: rgba(73, 73, 73, 0.652);
+	}
+
+	.modal {
+		width: 90%;
+		max-width: 1200px;
+		/* background: rgb(133, 133, 133); solo era una guia, ya lo puedo quitar*/
+		/* height: 90%; */
+		max-height: 90%;
+		display: flex;
+		/* align-items: center; este no va a ir en este caso porque hace que el boton quede muy separado*/
+		justify-content: center;
+		position: relative;
+
+		.boton-cerrar {
+			position: absolute;
+			right: -20px;
+			top: -20px;
+			width: 20px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: none;
+			border: none;
+			cursor: pointer;
+			color: white;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
+
+			@media screen and (max-width: 694px) {
+				grid-template-columns: 1fr;
+				width: 80vw;
+				max-width: 400px;
+				overflow: scroll;
+			}
+			@media screen and (max-width: 444px) {
+				width: 90vw;
+			}
+
+			.thumb {
+				img {
+					border-radius: 10px;
+					width: 100%;
+					vertical-align: top;
+				}
+			}
+			.info {
+				/* background: white; */
+				display: grid;
+				grid-template-rows: auto 1fr;
+				gap: 10px;
+				max-height: 90vh;
+				/* border-radius: 8px; */
+
+				.head {
+					background: white;
+					padding: 20px;
+					border-radius: 8px;
+					display: flex;
+					flex-direction: column;
+					gap: 7px;
+
+					.dark & {
+						background: var(--shade-9);
+					}
+
+					.titulo {
+						color: var(--shade-9);
+						.dark & {
+							color: var(--shade-2);
+						}
+					}
+					.categoria {
+						color: var(--shade-6);
+						.dark & {
+							color: var(--shade-4);
+						}
+					}
+				}
+				.body {
+					background: white;
+					padding: 20px;
+					border-radius: 8px;
+					overflow: auto;
+					color: var(--shade-8);
+
+					.dark & {
+						background: var(--shade-9);
+					}
+
+					p {
+						margin-bottom: 15px;
+						.dark & {
+							color: var(--shade-2);
+						}
+					}
+
+					img {
+						width: 50%;
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+}
